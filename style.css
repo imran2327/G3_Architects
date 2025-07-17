@@ -28,7 +28,8 @@ header nav {
     justify-content: space-between;
 }
 
-.container1 {
+.container1,
+main {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 10px;
@@ -131,7 +132,8 @@ button:hover {
         margin: 25px 0;
     }
 
-    .hero a button {
+    .hero a button,
+    button {
         margin: 5px 0;
         font-size: 10px;
         padding: 10px 10px;
@@ -151,70 +153,341 @@ button:hover {
         justify-content: space-around;
     }
 
-  
-
-   
-
-   
-
     .hero-text {
         padding: 0 50px;
         text-align: center;
     }
 
-    /* .hero-text h2 {
-        font-size: 40px;
-        margin: 25px 0;
-    }
 
-    .hero-text p {
-        font-size: 12px;
-        margin: 25px 0;
-    }
+}
 
-    .hero a button {
-        margin: 5px 0;
-        font-size: 12px;
-        padding: 10px 10px;
-    }
-     header nav {
+main section {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-top: 100px;
+}
+
+main section .section1,
+.section2 {
+    width: 50%;
+}
+
+main .section1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.section2 h2 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section2 p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+section .section1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#A {
+    color: rgba(0, 0, 0, 0.432);
+    font-weight: 400;
+}
+
+#B {
+    color: black;
+    font-weight: 800;
+}
+
+#C {
+    color: orange;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 568px) {
+
+    section {
         flex-direction: column;
-        gap: 2rem;
     }
 
-    header nav h2 {
-        font-size: 23px;
+    main section .section1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
     }
 
-    header nav ul {
-        gap: 1.5rem;
-
+    .section2 {
+        i text-align: center;
     }
 
-    header nav ul li a {
-        font-size: 12px;
+    main section .section1,
+    .section2 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 568px) and (max-width: 1024px) {
+
+    section {
+        flex-direction: column;
     }
 
-    .hero-text {
-        padding: 0 10px;
+    main section .section1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .section2 {
         text-align: center;
     }
 
-    .hero-text h2 {
+    main section .section1,
+    .section2 {
+        width: 100%;
+    }
+
+    main section .section2 h2 p {
+        text-align: center;
+    }
+}
+
+aside {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-top: 100px;
+    gap: 100px;
+    position: relative;
+}
+
+.box_content2 , box_content1 {
+    width: calc(1400/2);
+    height: 100%;
+}
+
+
+.p1 {
+    margin: 50px 0;
+}
+
+main aside .boxes {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+aside .boxes h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#box_text {
+    font-size: 65px;
+}
+
+.box_content h2 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 20px;
+
+}
+
+.aside .boxes p {
+
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.box_content2 img {
+    width: 100%;
+   
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#box_content h2 {
+    font-size: 65px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+#box_content p {
+    font-size: 16px;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+#box_content {
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 70%;
+    right: 30%;
+}
+
+@media screen and (max-width: 1328px) {
+    #box_content {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 568px) {
+    aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .box_content2 {
+        width: 100%;
+
+    }
+
+    .box_content2 img {
+        width: 100%;
+    }
+
+    #box_text {
         font-size: 32px;
-        margin: 25px 0;
+        text-align: center;
     }
 
-    .hero-text p {
-        font-size: 10px;
-        margin: 25px 0;
+
+}
+
+
+@media screen and (min-width: 568px) and (max-width: 1024px) {
+    aside .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 
-    .hero a button {
-        margin: 5px 0;
-        font-size: 10px;
-        padding: 10px 10px;
-    } */
+    aside {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .box_content2 {
+        width: 100%;
+
+    }
+
+    .box_content2 img {
+        width: 100%;
+    }
+
+    #box_text {
+        font-size: 32px;
+        text-align: center;
+    }
 
 
+}
+
+footer {
+    margin: 100px 0;
+}
+
+footer h2 {
+    font-size: 45px;
+    font-weight: bold;
+  
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+footer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 10px;
+     margin-top: 100px;
+}
+
+footer p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 80px;
+}
+
+footer .card a h2{
+    font-size: 45px;
+}
+
+footer .card a h4{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+footer .card a{
+    border:1px solid orange;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.card{
+    text-align: center;
+}
+
+footer .card {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 568px) {
+    footer .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .card a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    footer .card a h2 {
+        font-size: 32px;
+    }
+
+    footer .card a h4 {
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (min-width: 568px) and (max-width: 1024px) {
+    footer .card {
+      display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    
+    
 }
